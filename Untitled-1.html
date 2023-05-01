@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Carta de Apresentação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-K1BG2XbyrBhjDl7xuHn+UT27jKwcdRYgzwuj7PI+8pLhjXChYYc6VykaKxvZtWVKmj23T0w+IPB2QKnl14sC0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Untitled-1.css">   
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Landing Page</a></li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown">Sobre mim</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Licenciatura</a>
+                            <ul>
+                                <li><a href="#">cadeiras</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Educação</a>
+                            <ul>
+                                <li><a href="#">escolas</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Aptidões e competências pessoais</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Técnicas</a></li>
+                                <li><a href="#">Organizativas</a></li>
+                                <li><a href="#">Sociais</a></li>
+                                <li><a href="#">Linguísticas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Interesses e hobbies</a></li>
+                        <li><a href="#">Experiencia profissional</a></li>
+                    </ul>
+
+                <li>
+                    <a href="#">Projetos</a>
+                    <ul>
+                        <li><a href="#">Projetos realizados em diversas UCs</a></li>
+                        <li><a href="#">Projetos realizados por mim</a></li>
+                        <li><a href="#">Projetos de fim de curso realizados que achei interessantes</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Programação Web</a>
+                    <ul>
+                        <li class="dropdown-submenu">
+                            <a href="#">tecnologias existentes</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">front-end</a></li>
+                                <li><a href="#">back-end</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Laboratórios</a></li>
+                        <li><a href="#">notícias</a></li>
+                    </ul>
+                <li><a href="#">Blog</a></li>
+                <li>
+                    <a href="#">Sobre este website</a>
+                    <ul>
+                        <li><a href="#">tecnologias usadas</a></li>
+                        <li><a href="#">padrões usados</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Rodapé</a></li>
+                </li>
+
+
+                </li>
+                <li>
+                    <button id="darkmode-toggle" aria-label="Toggle dark mode">
+                        <i class="fa-sharp fa-light fa-moon"></i>
+                        <i class="fa-sharp fa-light fa-sun"></i>
+                    </button>
+                </li>
+
+            </ul>
+
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Seja Bem-Vindo!</h1>
+            <p>Acredite em você mesmo e nos seus sonhos. Não deixe de lutar pelo que acredita!</p>
+        </div>
+        <article class="about">
+            <h2>Um pouco mais sobre mim</h2>
+            <p>
+                Além do meu interesse pela tecnologia, considero-me uma pessoa organizada, responsável e dedicada aos
+                meus
+                objetivos. Acredito que essas são qualidades importantes para ter sucesso no mundo da programação.
+                Quando
+                terminar o curso, gostaria de trabalhar como desenvolvedor web em uma empresa renomada e contribuir para
+                projetos que tenham um impacto positivo na sociedade.
+            </p>
+            <p>
+                Fora dos estudos, gosto de praticar desportos e sou um grande fã de futebol. Também gosto de viajar e
+                conhecer novas culturas. Uma das minhas viagens favoritas foi para a Espanhã, onde pude experimentar a
+                comida local e
+                visitar locais históricos e de viversões como Isla Magica.
+            </p>
+        </article>
+
+        <section>
+            <h1>Calculadora</h1>
+            <input type="text" id="expression-input" placeholder="Insira uma expressão aritmética">
+            <br>
+            <button id="calculate-button">Calcular</button>
+            <button id="clear-button">Limpar</button>
+            <br>
+            <div id="result"></div>
+        </section>
+
+        <section>
+            <div id="image-container">
+                <img src="imagens/plano-de-carreira-o-que-e-um.jpg" alt="Imagem inspiradora">
+                <div id="quote"></div>
+            </div>
+
+            <form id="quote-form">
+                <label for="quote-input">Escreva uma frase inspirada nesta imagem:</label>
+                <input type="text" id="quote-input" name="quote">
+                <button type="submit">Enviar</button>
+                
+            </form>
+        </section>
+
+        <section>
+            <label for="nome">Digite seu nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <p id="mensagem"></p>
+            <h1 id="titulo"></h1>
+            <button id="botao">Clique aqui</button>
+        </section>
+
+        <section>
+            <p id="date"></p>
+        </section>
+
+        <section>
+            <button onmouseover="this.style.backgroundColor='red'"
+                onmouseout="this.style.backgroundColor='white'">Clique aqui</button>
+        </section>
+        <script>
+            const darkmodeToggle = document.querySelector('#darkmode-toggle');
+
+            darkmodeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('darkmode');
+            });
+
+
+
+            const calculateButton = document.getElementById("calculate-button");
+            const clearButton = document.getElementById("clear-button");
+            const resultDiv = document.getElementById("result");
+
+            calculateButton.addEventListener("click", () => {
+                const expressionInput = document.getElementById("expression-input");
+                const expression = expressionInput.value;
+                const result = eval(expression);
+                resultDiv.innerHTML = `<span style="color:green">Resultado: ${result}</span>`;
+            });
+
+            clearButton.addEventListener("click", () => {
+                resultDiv.innerHTML = "";
+            });
+
+
+            const form = document.querySelector('#quote-form');
+            const quoteInput = document.querySelector('#quote-input');
+            const quote = document.querySelector('#quote');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                quote.textContent = quoteInput.value;
+                quoteInput.value = '';
+            });
+
+
+            const nomeInput = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
+            const titulo = document.getElementById('titulo');
+            const botao = document.getElementById('botao');
+
+            botao.addEventListener('click', function showName() {
+                const nome = nomeInput.value;
+                mensagem.innerText = `Olá, ${nome}! Bem-vindo à minha página.`;
+                titulo.innerText = `Queres conhecer a minha página ${nome} ?`;
+                botao.innerText = `Clique aqui, ${nome}!`;
+            });
+
+            // Obter a data de hoje
+            const hoje = new Date();
+
+            // Array com os nomes dos meses
+            const meses = [
+                "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+                "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+            ];
+
+            const dateElement = document.getElementById("date");
+            const today = new Date();
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            const formattedDate = today.toLocaleDateString('pt-BR', options);
+            dateElement.textContent = formattedDate;
+
+        </script>
+    </main>
+    <footer id="myFooter">
+        <section>
+            <p>Wisley F. F. Da Costa | a22103352 | Programação Web 2023</p>
+        </section>
+
+    </footer>
+
+</html>
